@@ -8,9 +8,9 @@
     <input id="chat-message-input" type="text" size="100" /><br />
     <input id="chat-message-submit" type="button" value="Send" />
   </body>
+  
   <script>
     var roomName = "{{ room|escapejs }}";
-    alert(roomName)
     var chatSocket = new WebSocket(
       "ws://" + window.location.host + "/ws/chat/" + roomName + "/"
     );
